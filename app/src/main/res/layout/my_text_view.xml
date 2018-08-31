@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_text_view"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    style="@style/AppTheme"
+    android:layout_margin="8dp"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/my_text_view_title_textview"
+            style="@style/GreenText.Large"
+            android:layout_width="240dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:text="Title"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/my_text_view_image_imageview"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/my_text_view_description_textview"
+            style="@style/GreenText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Mauris luctus dignissim imperdiet. Nullam quis libero vulputate dui elementum ultricies a nec sem. Maecenas ultricies nec ante vel tempor. Fusce justo odio, mollis id egestas et, tincidunt mollis nisi. Duis fermentum vitae lectus non dictum. Duis pulvinar, massa vel dapibus mattis, ligula eros consectetur orci, et lobortis lectus erat ac neque. Etiam finibus porttitor justo, nec pharetra mi bibendum id. "
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/my_text_view_title_textview"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/my_text_view_title_textview"
+            app:layout_constraintTop_toBottomOf="@+id/my_text_view_title_textview"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/my_text_view_image_imageview"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/my_text_view_description_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@android:drawable/btn_dialog" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
