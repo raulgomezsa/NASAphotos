@@ -11,6 +11,7 @@ import com.example.rual.nasaphotos.model.Photos
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
 import java.net.URL
+import kotlinx.android.synthetic.main.my_activity.*
 
 class MyActivity : Activity(){
 
@@ -48,7 +49,7 @@ class MyActivity : Activity(){
         viewManager = LinearLayoutManager(this)
         viewAdapter = MyAdapter(dataset)
 
-        recyclerView = findViewById<RecyclerView>(R.id.my_recycler_view).apply {
+        recyclerView = my_recycler_view.apply {
             // use this setting to improve performance if you know that changes
             // in content do not change the layout size of the RecyclerView
             setHasFixedSize(true)
