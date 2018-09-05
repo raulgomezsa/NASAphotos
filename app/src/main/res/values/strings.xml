@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">NASAphotos</string>
-    <string name="my_text_view_description_text">Photograph</string>
+    <string name="my_text_view_title_text">Title</string>
+    <string name="my_text_view_description_text">Mauris luctus dignissim imperdiet. Nullam quis libero vulputate dui elementum ultricies a nec sem. Maecenas ultricies nec ante vel tempor. Fusce justo odio, mollis id egestas et, tincidunt mollis nisi. Duis fermentum vitae lectus non dictum. Duis pulvinar, massa vel dapibus mattis, ligula eros consectetur orci, et lobortis lectus erat ac neque. Etiam finibus porttitor justo, nec pharetra mi bibendum id.</string>
+    <string name="my_text_view_imgdescription_text">Photograph</string>
 </resources>

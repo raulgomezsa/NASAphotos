@@ -1,5 +1,6 @@
-package com.example.rual.nasaphotos.interfaces
+package com.example.rual.nasaphotos.api
 
+import com.example.rual.nasaphotos.model.Photo
 import com.example.rual.nasaphotos.model.Photos
 import retrofit2.Call
 import retrofit2.http.GET
