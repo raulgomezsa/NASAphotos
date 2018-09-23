@@ -23,7 +23,7 @@ class MyActivity : AppCompatActivity(), MyActivityContract.View<MyActivityContra
         val TAG = MyActivity::class.simpleName
     }
 
-    var mPresenter : MyActivityContract.Presenter? = MyActivityPresenter(this)
+    var mPresenter : MyActivityContract.Presenter? = null
     var mPhotos: Photos? = null
 
     private lateinit var recyclerView: RecyclerView
@@ -39,11 +39,18 @@ class MyActivity : AppCompatActivity(), MyActivityContract.View<MyActivityContra
 
         setContentView(R.layout.my_activity)
 
+        setPresenter(MyActivityPresenter(this))
+
     }
 
     override fun onResume() {
         super.onResume()
         mPresenter?.getVideoList()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mPresenter?.onDestroy()
     }
 
     override fun showProgress() {

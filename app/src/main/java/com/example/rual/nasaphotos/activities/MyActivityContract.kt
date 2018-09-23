@@ -20,11 +20,13 @@ class MyActivityContract {
     }
 
     interface Presenter {
-        fun subscribe()
-
-        fun unSubscribe()
 
         fun getVideoList()
+
+        fun onResume()
+
+        fun onDestroy()
+
     }
 
 }

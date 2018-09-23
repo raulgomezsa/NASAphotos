@@ -2,7 +2,6 @@ package com.example.rual.nasaphotos.presenters
 
 import com.example.rual.nasaphotos.activities.MyActivityContract
 import com.example.rual.nasaphotos.api.NASAPhotosRetriever
-import com.example.rual.nasaphotos.api.NASAPhotosRetrofit
 import com.example.rual.nasaphotos.model.Photos
 import retrofit2.Call
 import retrofit2.Callback
@@ -31,20 +30,12 @@ class MyActivityPresenter (var myActivityView: MyActivityContract.View<MyActivit
 
     }
 
-    override fun subscribe() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun unSubscribe() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    fun onResume() {
+    override fun onResume() {
         myActivityView?.showProgress()
 
     }
 
-    fun onDestroy() {
+    override fun onDestroy() {
         myActivityView = null
     }
 
