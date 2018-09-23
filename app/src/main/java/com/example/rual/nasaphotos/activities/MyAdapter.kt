@@ -29,15 +29,17 @@ class MyAdapter(private val myDataset: Photos) :
 
         val format = SimpleDateFormat("dd/MM/yyy")
 
-        if (position%2==1) {
+        if (holder.adapterPosition%2==1) {
             holder.cardView.setCardBackgroundColor(holder.cardView.context.resources.getColor(R.color.accent_material_light))
+        } else {
+            holder.cardView.setCardBackgroundColor(holder.cardView.context.resources.getColor(R.color.white))
         }
 
-        holder.cardView.my_text_view_title_textview.text = format.format(myDataset.photos[position].earth_date)
-        holder.cardView.my_text_view_description_textview.text = myDataset.photos[position].camera.full_name
+        holder.cardView.my_text_view_title_textview.text = format.format(myDataset.photos[holder.adapterPosition].earth_date)
+        holder.cardView.my_text_view_description_textview.text = myDataset.photos[holder.adapterPosition].camera.full_name
 
         Picasso.get()
-                .load(myDataset.photos[position].img_src)
+                .load(myDataset.photos[holder.adapterPosition].img_src)
                 .placeholder(R.drawable.placeholder)
                 .into(holder.cardView.my_text_view_image_imageview)
     }
